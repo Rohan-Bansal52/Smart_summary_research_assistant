@@ -21,7 +21,29 @@ The Smart Research Assistant follows a **clean architecture** that separates the
 - **Frontend (Chrome Extension):** Built with **HTML, CSS, JavaScript** to extract webpage text, interact with the backend, and display results. Uses **Chrome Storage API** to save summaries locally.  
 - **Backend (Spring Boot):** Provides **RESTful APIs** to handle requests.  
 - **Spring AI Integration:** Connects with **Large Language Models (LLMs)** like OpenAI or Google Gemini for summarization.  
-- **Architecture Pattern:** Simple client-server model that ensures modularity and scalability.  
+- **Architecture Pattern:** Simple client-server model that ensures modularity and scalability.
+-  ┌───────────────────────────────┐
+ │        Chrome Extension       │
+ │  - UI (HTML, CSS, JS)         │
+ │  - Extracts webpage content   │
+ │  - Sends requests via fetch() │
+ │  - Stores notes (Chrome API)  │
+ └───────────────┬───────────────┘
+                 │
+                 ▼
+ ┌───────────────────────────────┐
+ │     Spring Boot Backend       │
+ │  - REST Controller (/api/..)  │
+ │  - Service Layer              │
+ │  - Integrates with Spring AI  │
+ └───────────────┬───────────────┘
+                 │
+                 ▼
+ ┌───────────────────────────────┐
+ │         AI Model (LLM)        │
+ │  - OpenAI / Gemini / etc.     │
+ │  - Generates summary          │
+ └───────────────────────────────┘
 
-### 🔹 Architecture Diagram  
+This is the main structure which ease the building of the project.The service layer completly handle the whole flow upto the integration with ai.
 
