@@ -1,0 +1,105 @@
+body {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  background: #f0f4ff; /* light blue background */
+  margin: 0;
+  padding: 0;
+}
+
+.container {
+  width: 100%;
+  padding: 16px;
+  box-sizing: border-box;
+}
+
+.header {
+  text-align: center;
+  padding: 12px;
+  background: linear-gradient(135deg, #2563eb, #1d4ed8); /* Blue gradient */
+  color: white;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+}
+
+.header h2 {
+  margin: 0;
+  font-size: 18px;
+  font-weight: bold;
+}
+
+.action {
+  margin-top: 20px;
+  text-align: center;
+}
+
+.action button {
+  padding: 10px 18px;
+  background: #3b82f6; /* Blue */
+  border: none;
+  border-radius: 8px;
+  color: white;
+  font-weight: bold;
+  font-size: 14px;
+  cursor: pointer;
+  box-shadow: 0 2px 6px rgba(59,130,246,0.4);
+  transition: background 0.3s, transform 0.2s;
+}
+
+.action button:hover {
+  background: #1e40af; /* Darker blue */
+  transform: scale(1.05);
+}
+
+.notes {
+  margin-top: 24px;
+}
+
+.notes h3 {
+  font-size: 16px;
+  margin-bottom: 10px;
+  color: #1e3a8a; /* Dark blue */
+}
+
+textarea {
+  width: 100%;
+  height: 120px;
+  padding: 10px;
+  border-radius: 8px;
+  border: 1px solid #3b82f6;
+  background: #eef2ff; /* light blue */
+  font-size: 14px;
+  color: #111827;
+  resize: none;
+  outline: none;
+}
+
+#saveNotesBtn {
+  margin-top: 12px;
+  width: 100%;
+  padding: 10px;
+  background: #2563eb; /* Blue */
+  color: white;
+  border: none;
+  border-radius: 8px;
+  font-weight: bold;
+  cursor: pointer;
+  font-size: 14px;
+  box-shadow: 0 2px 6px rgba(37,99,235,0.4);
+  transition: background 0.3s, transform 0.2s;
+}
+
+#saveNotesBtn:hover {
+  background: #1d4ed8;
+  transform: scale(1.03);
+}
+
+#result {
+  margin-top: 18px;
+  padding: 12px;
+  background: #e0f2fe; /* soft sky blue */
+  border-radius: 8px;
+  font-size: 14px;
+  color: #1e3a8a;
+  border: 1px solid #3b82f6;
+  min-height: 50px;
+  box-shadow: inset 0 2px 4px rgba(0,0,0,0.05);
+}
