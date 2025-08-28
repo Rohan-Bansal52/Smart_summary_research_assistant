@@ -36,6 +36,7 @@ async function summarizeText() {
         const response = await fetch('http://localhost:8080/api/research/process', {
             method: 'POST',
             headers: { 'Content-Type': 'application/json' },
+            //sending the query as per the required or mentioned format of "content" and "operation"
             body: JSON.stringify({ content: result, operation: 'summarize' })
         });
 

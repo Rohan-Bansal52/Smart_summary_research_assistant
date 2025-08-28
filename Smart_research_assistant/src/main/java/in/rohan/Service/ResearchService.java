@@ -25,11 +25,13 @@ public class ResearchService {
 		this.webClient=webclienBuilder.build();
 	} 
 
-	// this wouldbe our important method for the working
+	// this would be our important method for the working
 	public String generator(ResearchRequest req) {		
 		// 1. build the prompt
 		String prompt=buildPrompt(req); //this is the final prompt which need to be parsed
 		
+		//still we have not made the query to the ai model 
+		//now we had made the prompt using the "content" and the "operation"
 		// 2. query the Ai model api
 		//the actual formating of the query is in the mentioned pattern
 		Map<String,Object> requestbody= 
@@ -53,7 +55,7 @@ public class ResearchService {
 		// 4. return the response
 		 
 		return extracttextformat(response);
-		
+		 //response is also in its format 
 	}
 	public String extracttextformat(String response) {
 	      try {
